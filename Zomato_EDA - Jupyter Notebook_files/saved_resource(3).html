@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://localhost:8888/notebooks/3-Zomato%20Data%20Analysis/Zomato_EDA.ipynb -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="./leaflet.js.download"></script>
+    <script src="./jquery-1.12.4.min.js.download"></script>
+    <script src="./bootstrap.min.js.download"></script>
+    <script src="./leaflet.awesome-markers.js.download"></script>
+    <link rel="stylesheet" href="./leaflet.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./font-awesome.min.css">
+    <link rel="stylesheet" href="./leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="./leaflet.awesome.rotate.min.css">
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <style>
+                #map_5a9a3d5934674d6aaf6f2662b8c4097b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="./leaflet_heat.min.js.download"></script>
+</head>
+<body>    
+    
+            <div class="folium-map leaflet-container leaflet-fade-anim leaflet-grab leaflet-touch-drag" id="map_5a9a3d5934674d6aaf6f2662b8c4097b" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./1899.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(287px, 256px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1898.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(287px, 0px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1899(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(31px, 256px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1899(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(543px, 256px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1900.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(287px, 512px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1898(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(31px, 0px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1898(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(543px, 0px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1900(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(31px, 512px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1900(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(543px, 512px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1899(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-225px, 256px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1899(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(799px, 256px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1898(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-225px, 0px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1898(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(799px, 0px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1900(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-225px, 512px, 0px); opacity: 1;"><img alt="" role="presentation" src="./1900(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(799px, 512px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"><canvas class="leaflet-heatmap-layer leaflet-layer leaflet-zoom-animated" width="984" height="590" style="transform-origin: 50% 50%; transform: translate3d(0px, 0px, 0px);"></canvas></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://localhost:8888/notebooks/3-Zomato%20Data%20Analysis/Zomato_EDA.ipynb#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://localhost:8888/notebooks/3-Zomato%20Data%20Analysis/Zomato_EDA.ipynb#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Data by © <a href="http://openstreetmap.org/">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.</div></div></div></div>
+        
+
+<script>    
+    
+            var map_5a9a3d5934674d6aaf6f2662b8c4097b = L.map(
+                "map_5a9a3d5934674d6aaf6f2662b8c4097b",
+                {
+                    center: [12.97, 77.59],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9190dc4f57424aac9b36cafe9a943022 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5a9a3d5934674d6aaf6f2662b8c4097b);
+        
+    
+            var heat_map_7dbca579db4648b7914e6e2d2d051aa7 = L.heatLayer(
+                [[45.95485055, -112.49659530324134, 262.0], [15.8876779, 75.7046777, 35.0], [13.0141618, 77.6518539, 9.0], [12.9114375, 77.5999754, 60.0], [12.9417261, 77.5755021, 17.0], [12.9932236, 77.5391579, 1.0], [12.93577245, 77.66676103753434, 131.0], [12.9089453, 77.6239038, 6.0], [44.621621, -84.790422, 39.0], [33.5935063, -79.0345627, 42.0], [17.2510682, 80.1651978, 9.0], [51.373656, -0.1042366, 29.0], [51.519619, -0.0744749, 11.0], [12.9624669, 77.6381958, 29.0], [13.0215466, 77.7640586, 2.0], [12.945245, 77.6269144, 36.0], [32.2934563, -64.78236307254568, 46.0], [12.996845, 77.6130165, 27.0], [13.0358698, 77.6323597, 4.0], [18.1475, 41.538889, 117.0], [13.0258087, 77.6305067, 2.0], [12.7405867, 77.8200481, 8.0], [12.967576, 77.7150877, 8.0], [12.9732913, 77.6404672, 83.0], [12.2655944, 76.6465404, 135.0], [27.64392675, 83.05280519687284, 25.0], [12.9678074, 77.6568367, 22.0], [12.9846713, 77.6790908, 5.0], [13.0221416, 77.6403368, 30.0], [13.0093455, 77.6377094, 6.0], [14.5395813, 121.070371, 106.0], [12.9271867, 77.6266252, 6.0], [12.93433385, 77.63040639553275, 54.0], [12.9343774, 77.628415, 38.0], [12.9400321, 77.6203272, 45.0], [12.9302645, 77.6332585, 98.0], [12.9081487, 77.5553179, 21.0], [17.1452094, 79.6218777, 22.0], [1.2847055, 103.84320655721689, 4.0], [13.0027353, 77.5703253, 16.0], [12.9552572, 77.6984163, 109.0], [13.2227, 78.5541977, 7.0], [13.0170347, 77.5726006, 23.0], [13.0217151, 77.7660547, 1.0], [23.769728, 90.3893881, 15.0], [13.0227204, 77.595715, 2.0], [12.9882338, 77.554883, 12.0], [-28.5477541, 29.788093, 19.0], [50.7721586, 0.09772783661369303, 36.0], [15.8782951, 74.5084834, 5.0], [23.1485712, 81.6048241, 3.0], [38.7801076, -121.5056438, 3.0], [12.9252241, 77.6367015, 50.0], [12.9931876, 77.5753419, 6.0], [17.5223139, 78.5804307, 34.0], [18.5322493, 73.8499601124847, 12.0], [12.973936, 77.6509982, 13.0], [12.9778793, 77.6246697, 57.0], [12.9414662, 77.7470942, 3.0], [12.988721250000001, 77.58516877601824, 12.0], [44.3730577, -71.6118577, 146.0], [12.9489339, 77.5968273, 37.0], [13.02383, 77.5529215, 3.0]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 15, "zoom": 20}
+            ).addTo(map_5a9a3d5934674d6aaf6f2662b8c4097b);
+        
+</script></body></html>
